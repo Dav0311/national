@@ -1,0 +1,40 @@
+{% extends 'register/layout.html'%}
+
+{% block body %}
+<div class="content">
+<h1>signup page.</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit facilis iste atque, perferendis earum beatae laboriosam labore corrupti officiis suscipit mollitia distinctio deleniti impedit obcaecati, sequi incidunt dolor. Cumque, dignissimos.</p>
+<hr>
+<br>
+<form action="{% url 'register:signup'%}" method="post">
+    {% csrf_token %}
+    <div>
+        <input type="text" name="username" placeholder="username">
+    </div>
+    <br>
+    <div>
+        <input type="password" name="password" placeholder="password">
+    </div>
+    <br>
+    <div>
+        <input type="email" name="email" placeholder="email"> 
+    </div>
+    <br>
+    <div>
+        <input type="number" name="phone_number" placeholder="phone number"> 
+    </div>
+
+    <br>
+    <input type="submit" value=" signup ">
+    {% if message %}
+    <div class="message">     
+        <div class="alert alert-info" role="alert">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+{% endif %}
+</form>
+<br>
+<p>Already have an account? <a href="{% url 'register:login'%}"> click here.</a></p>
+</div>
+{% endblock %}

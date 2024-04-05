@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nira</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'register/index.css' %}">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="container">
+        <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-primary); --bs-nav-pills-link-active-bg: var(--bs-white);">
+            <li class="nav-item" role="presentation">
+              <a href="{% url 'register:blog'%}">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Home</button>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a href="{% url 'register:data'%}">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Apply for ID</button>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a href="{% url 'register:contact'%}">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">Contact Us</button>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a href="{% url 'register:about'%}">
+              <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true">About Us</button>
+              </a>
+            </li>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Account
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="{% url 'register:login'%}">
+                    <button class="dropdown-item" type="button">log in</button>
+                  </a>
+                  </li>
+                  <li>
+                    <a href="{% url 'register:signup'%}">
+                    <button class="dropdown-item" type="button">signup</button>
+                  </a>
+                  <li>
+                    <a href="{% url 'register:logout'%}">
+                    <button class="dropdown-item" type="button">log out</button>
+                  </a>
+                </ul>
+              </div>
+         
+          </ul>
+
+          
+          {% block body %}
+          {% endblock %} 
+          <div class="footer">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">visit nira website page</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">visit nira website page</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          SecureToken: "82921470-1112-4241-9289-cc11206493f1", // You need to obtain a secure token from SMTP.js
+          To: "jessyvado123@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "dave test email",
+          Body: "And this is the body",
+        }).then((message) => alert(message));
+      }
+</script> -->
+
+</body>
+</html>

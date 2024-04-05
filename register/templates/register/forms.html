@@ -1,0 +1,22 @@
+
+{% extends 'register/layout.html'%}
+{% load static %}
+{% block body %}
+<div class="content">
+<h1>Forms submitted.</h1>
+<div class="info">
+    {%for form in forms%}
+    <div class="card">
+        <div >    
+           <p><a href="{% url 'register:form' form.id %}"><strong>Surname: </strong>{{form.surname}} <strong>  Given name: </strong>{{form.given_name}} <strong>  Other name: </strong>{{form.other_name }}</a></p>   
+        </div>
+        <div>
+            <p class="personalinfo"><span>Sex: {{form.sex}}, Applicant: {{form.eligibility}} Applicant: {{form.eligibility}}  Date of birth: {{form.date_of_birth}} </span></p> 
+        </div>
+        </div>
+      
+    <br>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,130 @@
+
+{% extends 'register/layout.html'%}
+{% load static %}
+{% block body %}
+<div class="content">
+<h1>forms page.</h1>
+<div class="info">
+    
+    <p><strong>Applicant: </strong>{{form.eligibility}}</p>
+    <p><strong>Surname: </strong>{{form.surname}}</p>
+    <p><strong>Given name: </strong>{{form.given_name}}</p>
+    <p><strong>Other name: </strong>{{form.other_name }}</p>
+    <p><strong>Maiden name: </strong>{{form.maiden_name}}</p>
+    <p><strong>Sex: </strong>{{form.sex}}</p>
+    <p><strong>Date of birth: </strong>{{form.date_of_birth}}</p>
+    <p><strong>Educational level: </strong>{{form.educ_level}}</p>
+    <p><strong>Profession: </strong>{{form.profession}}</p>
+    <p><strong>Occupation: </strong>{{form.rccupation}}</p>
+    <p><strong>Religion: </strong>{{form.religion}}</p>
+    <p><strong>Disabilities: </strong>{{form.disabilities}}</p>
+    <p><strong>Country: </strong>{{form.country}}</p>
+    <p><strong>County: </strong>{{form.county}}</p>
+    <p><strong>District: </strong>{{form.district}}</p>
+    <p><strong>Sub county </strong>{{form.subCounty}}</p>
+    <p><strong>Parish: </strong>{{form.parish}}</p>
+    <p><strong>Village: </strong>{{form.village}}</p>
+    <p><strong>Street: </strong>{{form.street}}</p>
+    <p><strong>House Number</strong>{{form.houseNo}}</p>
+    <p><strong>Years lived at residence: </strong>{{form.yearsLivedAtAddress}}</p>
+    <p><strong>Previous District of residence: </strong>{{form.previousDistrict}}</p>
+    <p><strong>Postal Address:</strong>{{form.postalAddress}}</p>
+    <p><strong>Birth Country: </strong>{{form.birthCountry}}</p>
+    <p><strong>Birth county: </strong>{{form.birthCounty}}</p>
+    <p><strong>District of birth: </strong>{{form.birthdistrict}}</p>
+    <p><strong>Sub county of birth: </strong>{{form.birthsubCounty}}</p>
+    <p><strong>Parish of birth: </strong>{{form.birthParish}}</p>
+    <p><strong>City of birth: </strong>{{form.birthCity}}</p>
+    <p><strong>Health Facility: </strong>{{form.healthFacility}}</p>
+    <p><strong>Weight at birth: </strong>{{form.weightatBirth }}</p>
+    <p><strong>Parity of child</strong>(1st, 2nd.... born): {{form.parity}}</p>
+    <p><strong>Country of origin: </strong>{{form.originCountry}}</p>
+    <p><strong>County of Origin: </strong>{{form.originCounty}}</p>
+    <p><strong>Parish of Origin: </strong>{{form.originParish}}</p>
+    <p><strong>District of Origin: </strong>{{form.originDistrict}}</p>
+    <p><strong>Sub county of origin: </strong>{{form.originSubcounty}}</p>
+    <p><strong>Village of origin: </strong>{{form.originVillage}}</p>
+    <p><strong>Clan: </strong>{{form.clan}}</p>
+    <p><strong>Tribe: </strong>{{form.tribe}}</p>
+    <p><strong>Type of citizenship: </strong>{{form.citizenshipType}}</p>
+    <p><strong>Citizenship certificate Number: </strong>{{form.citizenshipCertNumber}}</p>
+    <p><strong>Passport NUmber: </strong>{{form.passportNo}}</p>
+    <p><strong>File number: </strong>{{form.fileNumber}}</p>
+    <p><strong>polling station: </strong>{{form.pollingStation}}</p>
+    <p><strong>Place of residence: </strong>{{form.placeOfResidence}}</p>
+    <p><strong>Place of origin: </strong>{{form.placeOfOrgin }}</p>
+    <p><strong>Polling station Name: </strong>{{form.pollingStationName}}</p>
+    <p><strong>Marital status: </strong>{{form.maritalStatus}}</p>
+    <p><strong>Spouse Surname: </strong>{{form.spouseSurname}}</p>
+    <p><strong>Spouse Given name: </strong>{{form.spouseGivenName}}</p>
+    <p><strong>Spouse other name: </strong>{{form.spouseOtherName}}</p>
+    <p><strong>Spouse previous name: </strong>{{form.spousePreviousName}}</p>
+    <p><strong>National Identity Number: </strong>{{form.NIN}}</p>
+    <p><strong>Spouse citizenship Type: </strong>{{form.spouseCitizenshipType}}</p>
+    <p><strong>Place of marriage: </strong>{{form.placeOfMarriage}}</p>
+    <p><strong>Date of marriage: </strong>{{form.DateOfMarriage}}</p>
+    <p><strong>Type of marriage: </strong>{{form.TypeOfMarriag}}</p>
+    <p><strong>Marriage certificate Number: </strong>{{form.marriageCertNumber}}</p>
+    <p><strong>Other spouses: </strong>{{form.otherSpouses }}</p>
+    <p><strong>Father surname: </strong>{{form.fatherSurname}}</p>
+    <p><strong>Father's other name: </strong>{{form.fatherOtherName}}</p>
+    <p><strong>Father's other names: </strong>{{form.fatherGivenName}}</p>
+    <p><strong>Father's national Identity number: </strong>{{form.fatherNIN }}</p>
+    <p><strong>Father's citizenship type: </strong>{{form.fatherCitizenshipType}}</p>
+    <p><strong>Father's certificate Number: </strong>{{form.fatherCitizenshipCertNumber}}</p>
+    <p><strong>Father's living status: </strong>{{form.livingStatus}}</p>
+    <p><strong>Father's occupation: </strong>{{form.fatherOccupation}}</p>
+    <p><strong>Father's country: </strong>{{form.fatherCountry }}</p>
+    <p><strong>Father's county: </strong>{{form.fatherCounty}}</p>
+    <p><strong>Father's parish of residence: </strong>{{form.fatherParish }}</p>
+    <p><strong>Father's street of residence: </strong>{{form.fatherStreet}}</p>
+    <p><strong>Father's District of residence: </strong>{{form.fatherDistrict}}</p>
+    <p><strong>Father's sub county: </strong>{{form.fatherSubCounty}}</p>
+    <p><strong>Father's village of residence: </strong>{{form.fatherVillage}}</p>
+    <p><strong>Father's house number of residence: </strong>{{form.fatherHouseNo}}</p>
+    <p><strong>Mother's surname: </strong>{{form.motherSurname}}</p>
+    <p><strong>Mother's other names: </strong>{{form.motherOtherName}}</p>
+    <p><strong>Mother's given name: </strong>{{form.motherGivenName}}</p>
+    <p><strong>Mother's national Identity number: </strong>{{form.motherNIN}}</p>
+    <p><strong>Mother's citizenship type: </strong>{{form.motherCitizenshipType}}</p>
+    <p><strong>Mother's citizenship certificate number: </strong>{{form.motherCitizenshipCertNumber}}</p>
+    <p><strong>Mother's living status: </strong>{{form.motherLivingStatus}}</p>
+    <p><strong>Mother's occupation: </strong>{{form.motherOccupation }}</p>
+    <p><strong>Mother's country of residence: </strong>{{form.motherCountry}}</p>
+    <p><strong>other's county of residence: </strong>{{form.motherCounty}}</p>
+    <p><strong>Mother's parish of residence: </strong>{{form.motherParish}}</p>
+    <p><strong>Mother's street of residence: </strong>{{form.motherStreet }}</p>
+    <p><strong>Mother's district of residence: </strong>{{form.motherDistrict}}</p>
+    <p><strong>Mother's sub county of residence: </strong>{{form.motherSubCounty}}</p>
+    <p><strong>Mother's village of residence: </strong>{{form.motherVillage}}</p>
+    <p><strong>MOther's house number: </strong>{{form.motherHouseNo}}</p>
+    <p><strong>Guardian's surname: </strong>{{form.guardianSurname}}</p>
+    <p><strong>Guardian's other name: </strong>{{form.guardianOtherName}}</p>
+    <p><strong>Guardian's given name: </strong>{{form.guardianGivenName }}</p>
+    <p><strong>Guardian's passport number: </strong>{{form.guardianPassportNo }}</p>
+    <p><strong>Guardian's National Identity Number: </strong>{{form.guardianNIN}}</p>
+    <p><strong>Guardian's citizenship Type: </strong>{{form.guardianCitizenshipType}}</p>
+    <p><strong>Guardian's citizenship certificate number: </strong>{{form.guardianCitizenshipCertNumber}}</p>
+    <p><strong>Guardian's living status: </strong>{{form.guardianLivingStatus}}</p>
+    <p><strong>Guardian's occupation: </strong>{{form.guardianOccupation}}</p>
+    <p><strong>Guardian's country of residence: </strong>{{form.guardianCountry }}</p>
+    <p><strong>Guardian's county of residence: </strong>{{form.guardianCounty}}</p>
+    <p><strong>Guardian's parish of residence: </strong>{{form.guardianParish}}</p>
+    <p><strong>Guardian's street of residence: </strong>{{form.guardianStreet}}</p>
+    <p><strong>Guardian's district of residence: </strong>{{form.guardianDistrict}}</p>
+    <p><strong>Guardian's sub county of residence: </strong>{{form.guardianSubCounty}}</p>
+    <p><strong>Guardian's village of residence: </strong>{{form.guardianVillage}}</p>
+    <p><strong>Guardian's house number of residence: </strong>{{form.guardianHouseNo }}</p>
+    <br>
+   
+    <div class="mail">
+        <a href="{% url 'register:send_email'%}">
+            send confirmation email
+        </a>
+    </div>
+    <br>
+    <hr>
+    
+</div>
+</div>
+{% endblock %}

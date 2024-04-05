@@ -1,0 +1,28 @@
+
+{% extends 'register/layout.html'%}
+
+{% block body %}
+<h3> Upload youur documents to the system</h3>
+<p>Attach  your documents and submit after confirming that its the actual documents you would like to up load.</p>
+
+<br>
+<div class="form">
+    <form class="form-register" action="{% url 'register:document_upload' %}" method="post">
+        {% csrf_token %}
+        <br>
+        <div>
+            <label for="title">local council (village elder letter) or a letter from the diso ( must upload a document file )</label>
+            <input type="text" name="title" id="">
+            <label for="local_council">document</label>
+            <input type="file" name="local_council" id="">
+            <br>
+            <label for="diso">document</label>
+            <input type="file" name="diso" id="">
+        </div>
+        <br>
+        <input type="submit" value="Upload document">
+    </form>
+  
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'register/layout.html'%}
+{% load static %}
+
+{% block body %}
+<div class="content">
+    <h1>contact us</h1>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nostrum dicta fugiat debitis ut odit hic doloribus dignissimos mollitia iure, inventore harum explicabo architecto ad, reprehenderit necessitatibus cupiditate accusantium amet?</p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse repellat veniam non? Maxime ipsum, eos expedita facere accusantium voluptate aspernatur. Reprehenderit, quae odio. Eveniet dolor molestiae assumenda est blanditiis excepturi?</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quia distinctio assumenda sit tempore maxime iste eligendi eum perspiciatis soluta optio inventore, minima numquam voluptatum unde quae impedit expedita? Reiciendis.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias obcaecati ipsa pariatur earum vel error minus aut necessitatibus cum, perspiciatis officia voluptatum ad ipsam labore aliquam reiciendis, provident facilis sapiente.</li>
+        </ul>
+    </div>
+        <h4>Send an Email</h4>
+        <form method="post" action="{% url 'register:send_email' %}">
+            {% csrf_token %}
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" required><br><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+    
+            <label for="recipient">Recipient Email:</label>
+            <input type="email" name="recipient" required><br><br>
+    
+            <input type="submit" value="Send Email">
+        
+        {% if message %}
+        <div class="message">     
+            <div class="alert alert-info" role="alert">
+                <p>{{ message }}</p>
+            </div>
+        </div>
+    {% endif %}
+    </form>
+    
+   
+</div>
+{% endblock %}

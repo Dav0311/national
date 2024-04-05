@@ -1,0 +1,330 @@
+{% extends 'register/layout.html'%}
+
+{% block body %}
+<div class="content">
+<h1>register page.</h1>
+<br>
+<hr>
+   <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <ul>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi eaque laudantium facere accusantium suscipit ea.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi eaque laudantium facere accusantium suscipit ea.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi eaque laudantium facere accusantium suscipit ea.</li>
+    </ul>
+   </div>
+   <br>
+    <div class="form">
+         <div class="text">
+            <p>Upload documents from your current device. <a href="{% url 'register:document_upload' %}"> attach documents</a></p>
+           <br>
+         </div>
+        <form class="form-register" action="{% url 'register:data' %}" method="post">
+            {% csrf_token %}
+            <label for="eligibility">For Age group:</label>
+            <select name="eligibility" id="">
+                <option value="child">Child</option>
+                <option value="child">Adult</option>
+            </select>
+            <!-- Personal Information -->
+            <h2>Personal Information</h2>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname">
+            
+            <label for="given_name">Given Name:</label>
+            <input type="text" id="given_name" name="given_name">
+            <label for="other_name">Other Name:</label>
+            <input type="text" id="other_name" name="other_name">
+            <label for="maiden_name">Maiden Name:</label>
+            <input type="text" id="maiden_name" name="maiden_name">
+            <label for="sex">Sex:</label>
+            <select name="sex" id="">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="date_of_birth">Date of birth:</label>
+            <input type="text" name="date_of_birth" id="" value="YYYY-MM-DD">
+            <label for="educ_level">Level of education:</label>
+            <input type="text" name="educ_level" id="">
+            <label for="profession">profession:</label>
+            <input type="text" name="profession" id="">
+            <label for="occupation">occupation:</label>
+            <input type="text" name="occupation" id="">
+            <label for="religion">religion:</label>
+            <select name="religion" id="">
+                <option value="catholic">Catholic</option>
+                <option value="protestant">Protestant</option>
+                <option value="bornagain">Born Again</option>
+                <option value="moslem">Moslem</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="disabilities">disabilities:</label>
+            <select name="disabilities" id="">
+                <option value="blind">Name</option>
+                <option value="blind">Blind</option>
+                <option value="deaf">Deaf</option>
+                <option value="physical">Physical</option>
+                <option value="dumb">Dumb</option>
+            </select>
+           
+            <!-- Address Information -->
+            <h2>Address Information</h2>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country">   
+            <label for="county">County:</label>
+            <input type="text" id="county" name="county">
+            <label for="district">district:</label>
+            <input type="text" id="district" name="district">
+            <label for="subCounty">subCounty:</label>
+            <input type="text" id="subCounty" name="subCounty">
+            <label for="parish">parish:</label>
+            <input type="text" id="parish" name="parish">
+            <label for="village"> village:</label>
+            <input type="text" id="village" name="village">
+            <label for=" street">  street:</label>
+            <input type="text" id="street" name="street">
+            <label for=" houseNo">houseNo:</label>
+            <input type="text" id="houseNo" name="houseNo">
+            <label for=" yearsLivedAtAddress">Years spent at Address:</label>
+            <input type="number" id="yearsLivedAtAddress" name="yearsLivedAtAddress">
+            <label for=" previousDistrict">Previous District:</label>
+            <input type="text" id="previousDistrict" name="previousDistrict">
+            <label for="postalAddress">postal Address:</label>
+            <input type="text" id="postalAddress" name="postalAddress">
+            <label for="birthCountry"> birth Country:</label>
+            <input type="text" id="birthCountry" name="birthCountry">
+            <label for="birthCounty">birth County:</label>
+            <input type="text" id="birthCounty" name="birthCounty">
+            <label for="birthdistrict"> birth district:</label>
+            <input type="text" id=" birthdistrict" name=" birthdistrict">
+            <label for="birthsubCounty">birth sub County:</label>
+            <input type="text" id="birthsubCounty" name="birthsubCounty">
+            <label for="birthParish">birth Parish:</label>
+            <input type="text" id="birthParish" name="birthParish">
+            <label for="birthCity">birth Citys:</label>
+            <input type="text" id="birthCity" name="birthCity">
+            <label for="healthFacility">health Facility:</label>
+            <input type="text" id="healthFacility" name="healthFacility">
+            <label for="weightatBirth">weight at Birth:</label>
+            <input type="number" id="weightatBirth" name="weightatBirth">
+            <label for="parity">parity:</label>
+            <input type="number" id="parity" name="parity">
+            <label for="originCountry"> Country of origin:</label>
+            <input type="text" id="originCountry" name="originCountry">
+            <label for="originCounty">county of origin:</label>
+            <input type="text" id="originCounty" name="originCounty">
+            <label for="originParish">Parish of origin:</label>
+            <input type="text" id="originParish" name="originParish">
+            <label for="originDistrict">District of origin</label>
+            <input type="text" id="originDistrict" name="originDistrict">
+            <label for="originSubcounty">Sub county of origin:</label>
+            <input type="text" id="originSubcounty" name="originSubcounty">
+            <label for="originVillage">Village of origin:</label>
+            <input type="text" id="originVillage" name="originVillage">
+            <label for="clan">clan:</label>
+            <input type="text" id="clan" name="clan">
+            <label for="tribe">tribe:</label>
+            <input type="text" id="tribe" name="tribe">
+            <label for="citizenshipType">citizenship Type</label>
+            <select name="citizenshipType" id="citizenshipType">
+                <option value="bybirth">by birth</option>
+                <option value="byregistration">by registration</option>
+                <option value="bynaturalisation">by naturalisation</option>
+                <option value="dualcitizenship">dual citizenship</option>
+                <option value="1995constitution">1995 constitution</option>
+            </select>
+            <label for="citizenshipCertNumber">citizenship Certificate Number:</label>
+            <input type="text" id="citizenshipCertNumber" name="citizenshipCertNumber">
+            <label for="passportNo">passport No.:</label>
+            <input type="text" id="passportNo" name="passportNo">
+            <label for="fileNumber">fileNumber:</label>
+            <input type="number" id="fileNumber" name="fileNumber">
+            <label for="pollingStation">polling Station:</label>
+            <input type="text" id="pollingStation" name="pollingStation">
+            <label for="placeOfResidence">place Of Residence:</label>
+            <input type="text" id="placeOfResidence" name="placeOfResidence">
+            <label for="placeOfOrgin">place Of Orgin:</label>
+            <input type="text" id="placeOfOrgin" name="placeOfOrgin">
+            <label for="pollingStationName">polling Station Name:</label>
+            <input type="text" id="pollingStationName" name="pollingStationName">
+            <label for="maritalStatus">marital Status:</label>
+            <select name="maritalStatus" id="maritalStatus">
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+            <label for="spouseSurname">spouse Surname:</label>
+            <input type="text" id="spouseSurname" name="spouseSurname">
+            <label for="spouseGivenName">spouse Given Name:</label>
+            <input type="text" id="spouseGivenName" name="spouseGivenName">
+            <label for="spouseOtherName">spouse Other Name:</label>
+            <input type="text" id="spouseOtherName" name="spouseOtherName">
+            <label for="spousePreviousName">spouse Previous Name:</label>
+            <input type="text" id="spousePreviousName" name="spousePreviousName">
+            <label for="NIN">NIN:</label>
+            <input type="text" id="NIN" name="NIN">
+            <label for="spouseCitizenshipType">spouseCitizenshipType:</label>
+            <input type="text" id="spouseCitizenshipType" name="spouseCitizenshipType">
+            <label for="placeOfMarriage">place Of Marriage:</label>
+            <input type="text" id="placeOfMarriage" name="placeOfMarriage">
+            <label for="DateOfMarriage">Date Of Marriage:</label>
+            <input type="text" id="DateOfMarriage" name="DateOfMarriage" value="YYYY-MM-DD">
+            <label for="TypeOfMarriage">TypeOfMarriage:</label>
+            <select name="TypeOfMarriage" id="TypeOfMarriage">
+                <option value="civil">Civil</option>
+                <option value="religious">Religious</option>
+                <option value="cultural">Cultural</option>
+                <option value="customary">Customary</option>
+            </select>
+            <label for="marriageCertNumber">marriag Certificate Number:</label>
+            <input type="text" id="marriageCertNumber" name="marriageCertNumber">
+            <label for="otherSpouses">otherSpouses:</label>
+            <input type="number" id="otherSpouses" name="otherSpouses">
+            <label for="fatherSurname">father Surname:</label>
+            <input type="text" id="fatherSurname" name="fatherSurname">
+            <label for="fatherOtherName">fatherOtherName:</label>
+            <input type="text" id="fatherOtherName" name="fatherOtherName">
+            <label for="fatherGivenName">father Given Name:</label>
+            <input type="text" id="fatherGivenName" name="fatherGivenName">
+            <label for="fatherNIN">fatherNIN:</label>
+            <input type="text" id="fatherNIN" name="fatherNIN">
+            <label for="fatherCitizenshipType">father Citizenship Type:</label>
+            <select name="fatherCitizenshipType" id="fatherCitizenshipType">
+                <option value="bybirth">by birth</option>
+                <option value="byregistration">by registration</option>
+                <option value="bynaturalisation">by naturalisation</option>
+                <option value="dualcitizenship">dual citizenship</option>
+                <option value="1995constitution">1995 constitution</option>
+            </select>
+            <label for="fatherCitizenshipCertNumber">father Citizenship Certificate Number:</label>
+            <input type="text" id="fatherCitizenshipCertNumber" name="fatherCitizenshipCertNumber">
+            <label for="livingStatus">living Status:</label>
+            <select name="livingStatus" id="livingStatus">
+                <option value="alive">alive</option>
+                <option value="deceased">deceased</option>
+                <option value="unkown">unkown</option>
+            </select>
+            <label for="fatherOccupation">father occupation:</label>
+            <input type="text" id="fatherOccupation" name="fatherOccupation">
+            <label for="fatherCountry">father Country:</label>
+            <input type="text" id="fatherCountry" name="fatherCountry">
+            <label for="fatherCounty">  father County:</label>
+            <input type="text" id="fatherCounty" name="fatherCounty">
+            <label for="fatherParish">fatherParish:</label>
+            <input type="text" id="fatherParish" name="fatherParish">
+            <label for="fatherStreet">father Street:</label>
+            <input type="text" id="fatherStreet" name="fatherStreet">
+            <label for="fatherDistrict">father District:</label>
+            <input type="text" id="fatherDistrict" name="fatherDistrict">
+            <label for="fatherSubCounty">father Sub County:</label>
+            <input type="text" id="fatherSubCounty" name="fatherSubCounty">
+            <label for="fatherVillage">father Village:</label>
+            <input type="text" id="father Village" name="fatherVillage">
+            <label for="fatherHouseNo">father House No:</label>
+            <input type="text" id="fatherHouseNo" name="fatherHouseNo">
+            <label for="motherSurname">mother Surname:</label>
+            <input type="text" id="motherSurname" name="motherSurname">
+            <label for="motherOtherName">mother Other Name:</label>
+            <input type="text" id="motherOtherName" name="motherOtherName">
+            <label for="motherGivenName">motherGivenName:</label>
+            <input type="text" id="motherGivenName" name="motherGivenName">
+            <label for="motherNIN">mother NIN:</label>
+            <input type="text" id="motherNIN" name="motherNIN">
+            <label for="motherCitizenshipType">mother Citizenship Type:</label>
+            <select name="motherCitizenshipType" id="motherCitizenshipType">
+                <option value="bybirth">by birth</option>
+                <option value="byregistration">by registration</option>
+                <option value="bynaturalisation">by naturalisation</option>
+                <option value="dualcitizenship">dual citizenship</option>
+                <option value="1995constitution">1995 constitution</option>
+            </select>
+            <label for="motherCitizenshipCertNumber">mother Citizenship Certificate Number:</label>
+            <input type="text" id="motherCitizenshipCertNumber" name="motherCitizenshipCertNumber">
+            <label for="motherLivingStatus">mother Living Status:</label>
+            <select name="motherLivingStatus" id="motherLivingStatus">
+                <option value="alive">alive</option>
+                <option value="deceased">deceased</option>
+                <option value="unkown">unkown</option>
+            </select>
+            <label for="motherOccupation">mother Occupation:</label>
+            <input type="text" id="motherOccupation" name="motherOccupation">
+            <label for="motherCountry">mother Country:</label>
+            <input type="text" id="motherCountry" name="motherCountry">
+            <label for="motherCounty">mother County:</label>
+            <input type="text" id="motherCounty" name="motherCounty">
+            <label for="motherParish">mother Parish:</label>
+            <input type="text" id="motherParish" name="motherParish">
+            <label for="motherStreet">motherStreet:</label>
+            <input type="text" id="motherStreet" name="motherStreet">
+    
+            <label for="motherDistrict">mother District:</label>
+            <input type="text" id="motherDistrict" name="motherDistrict">
+            <label for="motherSubCounty">mother Sub County:</label>
+            <input type="text" id="motherSubCounty" name="motherSubCounty">
+            <label for="motherVillage">motherVillage:</label>
+            <input type="text" id="motherVillage" name="motherVillage">
+            <label for="motherHouseNo">motherHouseNo:</label>
+            <input type="text" id="motherHouseNo" name="motherHouseNo">
+            <label for="guardianSurname">guardian Surname:</label>
+            <input type="text" id="guardianSurname" name="guardianSurname">
+            <label for="guardianOtherName">guardian Other Name:</label>
+            <input type="text" id="guardianOtherName" name="guardianOtherName">
+            <label for="guardianGivenName">guardian Given Name:</label>
+            <input type="text" id="guardianGivenName" name="guardianGivenName">
+            <label for="guardianPassportNo">guardian Passport No:</label>
+            <input type="text" id="guardianPassportNo" name="guardianPassportNo">
+            <label for="guardianNIN">guardian NIN:</label>
+            <input type="text" id="guardianNIN" name="guardianNIN">
+            <label for="guardianCitizenshipType">guardianCitizenshipType:</label>
+            <select name="guardianCitizenshipType" id="guardianCitizenshipType">
+                <option value="bybirth">by birth</option>
+                <option value="byregistration">by registration</option>
+                <option value="bynaturalisation">by naturalisation</option>
+                <option value="dualcitizenship">dual citizenship</option>
+                <option value="1995constitution">1995 constitution</option>
+            </select>
+            <label for="guardianCitizenshipCertNumber">guardian Citizenship Certificate Number:</label>
+            <input type="text" id="guardianCitizenshipCertNumber" name="guardianCitizenshipCertNumber">
+            <label for="guardianLivingStatus">guardianLivingStatus:</label>
+            <select name="guardianLivingStatus" id="guardianLivingStatus">
+                <option value="alive">alive</option>
+                <option value="deceased">deceased</option>
+                <option value="unkown">unkown</option>
+            </select>
+            <label for="guardianOccupation">guardian Occupation:</label>
+            <input type="text" id="guardianOccupation" name="guardianOccupation">
+            <label for="guardianCountry">guardianCountry:</label>
+            <input type="text" id="guardianCountry" name="guardianCountry">
+            <label for="guardianCounty">guardianCounty:</label>
+            <input type="text" id="guardianCounty" name="guardianCounty">
+            <label for="guardianParish">guardian Parish:</label>
+            <input type="text" id="guardianParish" name="guardianParish">
+            <label for=" guardianStreet"> guardian Street:</label>
+            <input type="text" id="guardianStreet" name="guardianStreet">
+            <label for="guardianDistrict">guardian District:</label>
+            <input type="text" id="guardianDistrict" name="guardianDistrict">
+            <label for="guardianSubCounty">guardianSubCounty:</label>
+            <input type="text" id="guardianSubCounty" name="guardianSubCounty">
+            <label for="guardianVillage">guardianVillage:</label>
+            <input type="text" id="guardianVillage" name="guardianVillage">
+            <label for="guardianHouseNo">guardian HouseNo:</label>
+            <input type="text" id="guardianHouseNo" name="guardianHouseNo">
+            <!-- Add more fields for district, subCounty, parish, etc. -->
+            <br>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+            {% if message %}
+            <div class="message">     
+                <div class="alert alert-info" role="alert">
+                    <p>{{ message }}</p>
+                </div>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+   
+
+
+</div>
+{% endblock %}

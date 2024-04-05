@@ -1,0 +1,29 @@
+{% extends 'register/layout.html'%}
+
+{% block body %}
+<div class="content">
+    <h2>Send an Email</h2>
+    <form method="post" action="{% url 'register:send_email' %}">
+        {% csrf_token %}
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="recipient">Recipient Email:</label>
+        <input type="email" name="recipient" required><br><br>
+
+        <input type="submit" value="Send Email">
+    
+    {% if message %}
+    <div class="message">     
+        <div class="alert alert-info" role="alert">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+{% endif %}
+</form>
+
+</div>
+{% endblock %}
