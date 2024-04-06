@@ -102,6 +102,15 @@ ul .point{
     font-weight: bold;
   }
   
+  .required {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  input:focus {
+    border-color: blue;
+  }
+  
 
   input[type="submit"] {
     background-color: #007bff;
@@ -110,11 +119,15 @@ ul .point{
     border: none;
     cursor: pointer;
   }
-
+/* 
 input{
   padding: 10px;
   margin: 10px;
-   }
+   } */
+   input[type="text"] {
+    width: 300px; 
+  }
+  
 
 input[type="submit"]:hover {
     background-color: #0056b3;

@@ -14,7 +14,7 @@
     </ul>
    </div>
    <br>
-    <div class="form">
+    <div class="container">
          <div class="text">
             <p>Upload documents from your current device. <a href="{% url 'register:document_upload' %}"> attach documents</a></p>
            <br>
@@ -28,29 +28,29 @@
             </select>
             <!-- Personal Information -->
             <h2>Personal Information</h2>
-            <label for="surname">Surname:</label>
-            <input type="text" id="surname" name="surname">
+            <label for="surname" class="required-label" >Surname:<span id="requiredLabel">***</span></label>
+            <input type="text" id="required" name="surname">
             
-            <label for="given_name">Given Name:</label>
-            <input type="text" id="given_name" name="given_name">
-            <label for="other_name">Other Name:</label>
-            <input type="text" id="other_name" name="other_name">
-            <label for="maiden_name">Maiden Name:</label>
-            <input type="text" id="maiden_name" name="maiden_name">
-            <label for="sex">Sex:</label>
+            <label class="required-label" for="given_name">Given Name:<span id="requiredLabel">***</span></label>
+            <input type="text" id="required" name="given_name">
+            <label class="required-label" for="other_name">Other Name:<span id="requiredLabel">***</span></label>
+            <input type="text" id="required" name="other_name">
+            <label class="required-label" for="maiden_name">Maiden Name:<span id="requiredLabel">***</span></label>
+            <input type="text" id="required" name="maiden_name">
+            <label for="sex" >Sex:</span></label>
             <select name="sex" id="">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
-            <label for="date_of_birth">Date of birth:</label>
+            <label for="date_of_birth">Date of birth: </span></label>
             <input type="text" name="date_of_birth" id="" value="YYYY-MM-DD">
-            <label for="educ_level">Level of education:</label>
-            <input type="text" name="educ_level" id="">
-            <label for="profession">profession:</label>
-            <input type="text" name="profession" id="">
-            <label for="occupation">occupation:</label>
-            <input type="text" name="occupation" id="">
-            <label for="religion">religion:</label>
+            <label class="required-label" for="educ_level">Level of education: <span id="requiredLabel">***</span></label>
+            <input type="text" name="educ_level" id="required">
+            <label for="profession">profession: <span id="requiredLabel">***</span></label>
+            <input type="text" name="profession" id="required">
+            <label for="occupation">occupation: <span id="requiredLabel">***</span></label>
+            <input type="text" name="occupation" id="required">
+            <label for="religion">religion: <span id="requiredLabel">***</span></label>
             <select name="religion" id="">
                 <option value="catholic">Catholic</option>
                 <option value="protestant">Protestant</option>
@@ -58,7 +58,7 @@
                 <option value="moslem">Moslem</option>
                 <option value="other">Other</option>
             </select>
-            <label for="disabilities">disabilities:</label>
+            <label for="disabilities">disabilities: <span id="requiredLabel">***</span></label>
             <select name="disabilities" id="">
                 <option value="blind">Name</option>
                 <option value="blind">Blind</option>
@@ -69,7 +69,7 @@
            
             <!-- Address Information -->
             <h2>Address Information</h2>
-            <label for="country">Country:</label>
+            <label for="country">Country: <span id="requiredLabel">***</span></label>
             <input type="text" id="country" name="country">   
             <label for="county">County:</label>
             <input type="text" id="county" name="county">
